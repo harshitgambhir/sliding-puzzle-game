@@ -179,8 +179,13 @@ function checkWin() {
 // Dark/Light Mode Toggle Logic
 const modeToggle = document.getElementById('modeToggle');
 const storedMode = localStorage.getItem('mode');
+const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 if (storedMode) {
   document.body.classList.add(storedMode);
+} else if(isDarkMode) {
+  document.body.classList.add('dark-mode');
+} else {
+  document.body.classList.remove('dark-mode');
 }
 
 modeToggle.addEventListener('click', () => {
