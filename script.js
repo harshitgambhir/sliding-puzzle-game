@@ -5,10 +5,56 @@ let moves = 0;
 let emptyIndex = 8; // The last tile starts as empty.
 const tiles = [];
 const numberOverlays = [];
+
 const data = {
-  "2024-12-24": {
+  '2024-12-24': {
     imageURL: "https://i.imgur.com/F9U3Nua.jpeg",
-    positions: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    positions: [
+      7, 0, 1, 5, 4,
+      6, 2, 8, 3
+    ]
+  },
+  '2024-12-25': {
+    imageURL: 'https://i.imgur.com/RZfRvRr.jpeg',
+    positions: [
+      2, 7, 0, 4, 8,
+      3, 1, 6, 5
+    ]
+  },
+  '2024-12-26': {
+    imageURL: 'https://i.imgur.com/IpzVGsZ.jpeg',
+    positions: [
+      1, 7, 0, 8, 6,
+      5, 2, 4, 3
+    ]
+  },
+  '2024-12-27': {
+    imageURL: 'https://i.imgur.com/dCOMQEJ.jpeg',
+    positions: [
+      0, 1, 2, 3, 4,
+      5, 6, 7, 8
+    ]
+  },
+  '2024-12-28': {
+    imageURL: 'https://i.imgur.com/SDaxSr5.png',
+    positions: [
+      1, 6, 0, 7, 3,
+      8, 4, 5, 2
+    ]
+  },
+  '2024-12-29': {
+    imageURL: 'https://i.imgur.com/Z3VdOPf.png',
+    positions: [
+      2, 0, 5, 6, 8,
+      4, 1, 7, 3
+    ]
+  },
+  '2024-12-30': {
+    imageURL: 'https://i.imgur.com/rM4YRKk.jpeg',
+    positions: [
+      4, 3, 2, 8, 6,
+      1, 5, 7, 0
+    ]
   }
 }
 
