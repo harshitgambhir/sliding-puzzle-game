@@ -180,19 +180,24 @@ function checkWin() {
 const modeToggle = document.getElementById('modeToggle');
 const storedMode = localStorage.getItem('mode');
 const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 if (storedMode) {
   document.body.classList.add(storedMode);
 } else if(isDarkMode) {
+  document.body.classList.remove('light-mode');
   document.body.classList.add('dark-mode');
 } else {
   document.body.classList.remove('dark-mode');
+  document.body.classList.add('light-mode');
 }
 
 modeToggle.addEventListener('click', () => {
   if (document.body.classList.contains('dark-mode')) {
     document.body.classList.remove('dark-mode');
-    localStorage.setItem('mode', '');  // Remove mode preference
+    document.body.classList.add('light-mode');
+    localStorage.setItem('mode', 'light-mode');  // Remove mode preference
   } else {
+    document.body.classList.remove('light-mode');
     document.body.classList.add('dark-mode');
     localStorage.setItem('mode', 'dark-mode');  // Store mode preference
   }
