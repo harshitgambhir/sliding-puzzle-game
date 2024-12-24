@@ -267,8 +267,9 @@ button{
 }
 
 .modal-body img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -286,6 +287,15 @@ button{
   padding: 16px;
   border-radius: 1000px;
   background-color: var(--opacity-10);
+  margin-top: 1em;
+}
+
+.modal-body .moves-container {
+  color: var(--color-1);
+}
+
+#modal-solved .modal-header {
+  justify-content: center;
 }
 
 .close-button {
@@ -321,4 +331,11 @@ button{
 
 .policy {
   max-width: 800px;
+}
+
+@media (max-width: 500px) {
+  .modal {
+    width: 95%;
+    max-width: 350px;
+  }
 }
