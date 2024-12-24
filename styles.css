@@ -216,6 +216,7 @@ button{
 .tile.empty {
   background-color: transparent;
   border: none;
+  cursor: auto;
 }
 
 .modal {

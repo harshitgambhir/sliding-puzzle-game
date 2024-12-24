@@ -58,8 +58,18 @@ const data = {
   }
 }
 
+function toLocalISODate(date) {
+  // Get local date components
+  let year = date.getFullYear();
+  let month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+  let day = String(date.getDate()).padStart(2, '0');
+
+  // Construct ISO date string
+  return `${year}-${month}-${day}`;
+}
+
 const currentDate = new Date();
-const currentDateString = currentDate.toISOString().split('T')[0];
+const currentDateString = toLocalISODate(currentDate);
 const currentPositions = data[currentDateString].positions;
 const currentImageURL  = data[currentDateString].imageURL;
 
