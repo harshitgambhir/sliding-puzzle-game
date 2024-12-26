@@ -24,8 +24,8 @@ const data = {
   '2024-12-26': {
     imageURL: 'https://i.imgur.com/IpzVGsZ.jpeg',
     positions: [
-      8, 2, 3, 7, 6,
-      1, 4, 0, 5
+      0, 8, 2, 6, 4,
+      1, 5, 7, 3
     ]
   },
   '2024-12-27': {
